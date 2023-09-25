@@ -377,7 +377,7 @@ extension JTACMonthView {
         }
         if let monthDate = calendar.date(byAdding: .month, value: monthIndex, to: startDateCache) {
             let monthNumber = calendar.dateComponents([.month], from: monthDate)
-            let numberOfRowsForSection = monthData.numberOfRows(for: section, developerSetRows: _cachedConfiguration?.numberOfRows ?? 0)Sources/JTAppleCalendar/JTACMonthView.swift
+            let numberOfRowsForSection = monthData.numberOfRows(for: section, developerSetRows: _cachedConfiguration?.numberOfRows ?? 0)
             return ((startDate, endDate), monthNumber.month!, numberOfRowsForSection)
         }
         return nil

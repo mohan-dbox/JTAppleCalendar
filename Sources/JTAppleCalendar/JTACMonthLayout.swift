@@ -373,7 +373,7 @@ class JTACMonthLayout: UICollectionViewLayout, JTACMonthLayoutProtocol {
         
         let retval = UICollectionViewLayoutAttributes(forDecorationViewOfKind: decorationViewID, with: indexPath)
         decorationCache[indexPath] = retval
-        retval.frame = delegate.sizeOfDecorationView(indexPath: indexPath) ?? .zero
+        retval.frame = delegate?.sizeOfDecorationView(indexPath: indexPath) ?? .zero
         retval.zIndex = -1
         return retval
     }
